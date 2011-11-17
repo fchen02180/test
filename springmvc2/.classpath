@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org.springframework.asm-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org.springframework.beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org.springframework.context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org.springframework.context.support-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org.springframework.core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org.springframework.expression-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org.springframework.orm-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org.springframework.oxm-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org.springframework.web-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/org.springframework.web.servlet-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="/Users/frankchen/work/lib/spring/org.springframework.jdbc-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/frankchen/work/lib/spring/org.springframework.transaction-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/frankchen/.gradle/cache/mysql/mysql-connector-java/jars/mysql-connector-java-3.1.14.jar"/>
+	<classpathentry kind="lib" path="/Users/frankchen/.gradle/cache/org.hibernate/hibernate/jars/hibernate-3.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/frankchen/.gradle/cache/javax.transaction/jta/jars/jta-1.0.1B.jar"/>
+	<classpathentry kind="lib" path="/Users/frankchen/.gradle/cache/dom4j/dom4j/jars/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/Users/frankchen/.gradle/cache/commons-collections/commons-collections/jars/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="/Users/frankchen/.gradle/cache/ehcache/ehcache/jars/ehcache-1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/frankchen/.gradle/cache/cglib/cglib/jars/cglib-2.1_3.jar"/>
+	<classpathentry kind="lib" path="/Users/frankchen/.gradle/cache/antlr/antlr/jars/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="/Users/frankchen/.gradle/cache/quartz/quartz/jars/quartz-1.5.2.jar"/>
+	<classpathentry kind="output" path="WEB-INF/classes"/>
+</classpath>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/context
+	   http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<!-- <bean name="/hello_world.html" class="springmvc.web.HelloWorldController"/>
+	<bean name="/list_cars.html" class="springmvc.web.CarListController"/> -->
+	<context:component-scan base-package="springmvc.web" />
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+	    <property name="prefix" value="/jsp/"/>
+	    <property name="suffix" value=".jsp"/>
+	</bean>
+    
+    <bean id="runMeTask" class="com.mkyong.common.RunMeTask" />
+   		
+   <bean name="runMeJob"
+	class="org.springframework.scheduling.quartz.JobDetailBean">
+	
+		<property name="jobClass" value="com.mkyong.common.RunMeJob" />
+		
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="runMeTask" value-ref="runMeTask" />
+			</map>
+		</property>
+		
+	</bean>
+	
+	<!--
+	<bean id="runMeJob" 
+	  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		
+		<property name="targetObject" ref="runMeTask" />
+		<property name="targetMethod" value="printMe" />
+		
+	</bean>
+	-->
+	
+	<!-- Simple Trigger -->
+	<bean id="simpleTrigger"
+		class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		
+		<property name="jobDetail" ref="runMeJob" />
+		<property name="repeatInterval" value="5000" />
+		<property name="startDelay" value="1000" />
+		
+	</bean>
+	
+	<!-- Cron Trigger -->
+	<bean id="cronTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerBean">
+	
+		<property name="jobDetail" ref="runMeJob" />
+		<property name="cronExpression" value="0/5 * * * * ?" />
+	
+	</bean>
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="jobDetails">
+			<list>
+			<ref bean="runMeJob" />
+			</list>
+		</property>
+		
+		<property name="triggers">
+			<list>
+			<ref bean="simpleTrigger" />
+			</list>
+		</property>
+	</bean>
+</beans>
